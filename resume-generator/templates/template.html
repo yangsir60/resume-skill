@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{name}} 简历</title>
+<link rel="stylesheet" href="assets/resume.css">
+</head>
+<body>
+
+<div class="resume">
+
+  <!-- ===== 左侧栏 ===== -->
+  <div class="sidebar">
+    <!-- 证件照 -->
+    <div class="photo-placeholder">
+      {{#if photo}}
+      <img src="{{photo}}" alt="证件照">
+      {{else}}
+      照片<br>待插入
+      {{/if}}
+    </div>
+
+    <!-- 姓名 -->
+    <div class="name-block">
+      <div class="name">{{name}}</div>
+      {{#if nameEn}}<div class="name-en">{{nameEn}}</div>{{/if}}
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 联系方式 -->
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">基本信息</div>
+      <div class="contact-item">
+        <div class="ci-icon">&#9679;</div>
+        <div>
+          <div class="ci-label">生日</div>
+          <div class="ci-value">{{contact.birthday}}</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">&#9679;</div>
+        <div>
+          <div class="ci-label">住址</div>
+          <div class="ci-value">{{contact.location}}</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">&#9679;</div>
+        <div>
+          <div class="ci-label">电话</div>
+          <div class="ci-value">{{contact.phone}}</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">&#9679;</div>
+        <div>
+          <div class="ci-label">邮箱</div>
+          <div class="ci-value">{{contact.email}}</div>
+        </div>
+      </div>
+    </div>
+
+    {{#if hobbies}}
+    <div class="divider"></div>
+
+    <!-- 爱好 -->
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">爱好与自我介绍</div>
+      {{#each hobbies}}
+      <div class="hobby-item">
+        <div class="hobby-num">{{add @index 1}}.</div>
+        <div>{{this}}</div>
+      </div>
+      {{/each}}
+    </div>
+    {{/if}}
+
+    {{#if interests}}
+    <div class="divider"></div>
+
+    <!-- 兴趣标签 -->
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">兴趣爱好</div>
+      <div class="interest-circles">
+        {{#each interests}}
+        <div class="interest-circle {{lookup 'ic-' (add @index 1)}}">{{this}}</div>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+
+  <!-- ===== 右侧栏 ===== -->
+  <div class="main">
+
+    <!-- 教育经历 -->
+    {{#if education}}
+    <div class="section">
+      <div class="section-title">教育经历 EDUCATION</div>
+      {{#each education}}
+      <div class="edu-item">
+        <div class="edu-header">
+          <div>
+            <span class="edu-school">{{school}}</span>
+            {{#if schoolEn}}<span class="edu-school-en">{{schoolEn}}</span>{{/if}}
+          </div>
+          <span class="edu-period">{{period}}</span>
+        </div>
+        {{#if major}}<div class="edu-detail"><strong>{{major}}</strong> | {{detail}}</div>{{/if}}
+        {{#unless major}}<div class="edu-detail">{{detail}}</div>{{/unless}}
+      </div>
+      {{/each}}
+    </div>
+    {{/if}}
+
+    <!-- 工作经历 -->
+    {{#if experience}}
+    <div class="section">
+      <div class="section-title">公司工作 EXPERIENCE</div>
+      {{#each experience}}
+      <div class="work-item">
+        <div class="work-header">
+          <div class="work-title">{{company}}</div>
+          <span class="work-period">{{period}}</span>
+        </div>
+        <div class="work-sub">{{title}}{{#if titleEn}} | {{titleEn}}{{/if}}</div>
+        <div class="work-desc">{{detail}}</div>
+      </div>
+      {{/each}}
+    </div>
+    {{/if}}
+
+    <!-- 项目经历 -->
+    {{#if projects}}
+    <div class="section">
+      <div class="section-title">主要项目经历 Project Experience</div>
+      {{#each projects}}
+      <div class="project-item">
+        <div class="project-title"><span class="project-num">{{add @index 1}}</span>{{title}}</div>
+        <div class="project-desc">{{desc}}</div>
+      </div>
+      {{/each}}
+    </div>
+    {{/if}}
+
+    <!-- 荣誉证书 -->
+    {{#if awards}}
+    <div class="section">
+      <div class="section-title">荣誉与证书 THE AWARDS HONR</div>
+      {{#each awards}}
+      <div class="award-group">
+        {{#each items}}
+        <div class="award-item">{{this}}</div>
+        {{/each}}
+      </div>
+      {{/each}}
+    </div>
+    {{/if}}
+
+    <!-- 个人技能 -->
+    {{#if skills}}
+    <div class="section">
+      <div class="section-title">个人技能 PERSONAL SKILLS</div>
+      {{#each skills}}
+      <div class="skill-item"><span class="skill-star">★</span> {{this}}</div>
+      {{/each}}
+    </div>
+    {{/if}}
+
+  </div>
+</div>
+
+</body>
+</html>

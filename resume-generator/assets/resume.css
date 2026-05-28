@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans SC', 'Microsoft YaHei', 'SimHei', sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 10px;
+  min-height: 100vh;
+}
+
+/* ===== 简历主体 ===== */
+.resume {
+  /* A4: 210mm x 297mm → 794px x 1123px at 96dpi */
+  width: 718px;
+  height: 1045px;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ===== 左侧栏 ===== */
+.sidebar {
+  width: 255px;
+  background: #1a3a5c;
+  color: #fff;
+  padding: 28px 22px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  overflow: hidden;
+}
+
+.photo-placeholder {
+  width: 108px;
+  height: 132px;
+  background: #2a4f75;
+  border: 2px dashed #4a7aa8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 4px;
+  font-size: 10px;
+  color: #8ab4d8;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.name-block {
+  text-align: center;
+}
+.name-block .name {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.name-block .name-en {
+  font-size: 11px;
+  color: #8ab4d8;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #4a7aa8, transparent);
+}
+
+.sidebar-section {}
+.sidebar-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #6aabde;
+  margin-bottom: 9px;
+  border-bottom: 1px solid #2a4f75;
+  padding-bottom: 5px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #c8dff0;
+  line-height: 1.4;
+}
+.contact-item .ci-icon {
+  font-size: 14px;
+  margin-top: 2px;
+}
+.contact-item .ci-label {
+  font-size: 10px;
+  color: #6aabde;
+  margin-bottom: 1px;
+}
+.contact-item .ci-value {
+  font-size: 13px;
+  color: #e0eef8;
+}
+
+.hobby-item {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 9px;
+  font-size: 12.5px;
+  color: #c8dff0;
+  line-height: 1.5;
+}
+.hobby-num {
+  color: #6aabde;
+  font-size: 11px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.interest-circles {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.interest-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+.ic-1 { background: #2563a8; }
+.ic-2 { background: #1e7b5e; }
+.ic-3 { background: #8b3a3a; }
+
+/* ===== 右侧栏 ===== */
+.main {
+  flex: 1;
+  padding: 28px 24px 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #1a3a5c;
+  border-left: 3px solid #1a3a5c;
+  padding-left: 9px;
+  margin-bottom: 9px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Education */
+.edu-item {
+  margin-bottom: 12px;
+}
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+  min-width: 0;
+}
+.edu-school {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a3a5c;
+  flex-shrink: 0;
+}
+.edu-school-en {
+  font-size: 10px;
+  color: #888;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+.edu-period {
+  font-size: 12px;
+  color: #888;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+.edu-detail {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.65;
+  word-break: break-word;
+}
+
+/* Work block */
+.work-item {
+  margin-bottom: 14px;
+  padding-left: 14px;
+  border-left: 2px solid #d0e4f5;
+}
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 3px;
+  min-width: 0;
+  gap: 8px;
+}
+.work-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a3a5c;
+  flex-shrink: 0;
+}
+.work-period {
+  font-size: 11px;
+  color: #999;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.work-sub {
+  font-size: 12px;
+  color: #1a6daa;
+  margin-bottom: 5px;
+}
+.work-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+/* Project */
+.project-item {
+  margin-bottom: 10px;
+}
+.project-num {
+  font-size: 11px;
+  color: #1a6daa;
+  font-weight: 700;
+  margin-right: 4px;
+}
+.project-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a3a5c;
+  margin-bottom: 3px;
+}
+.project-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.65;
+}
+
+/* Awards */
+.award-group {
+  margin-bottom: 9px;
+}
+.award-item {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 4px;
+  padding-left: 8px;
+  border-left: 2px solid #e0e4ea;
+}
+
+/* Skills */
+.skill-item {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  border-left: 2px solid #c0d8ec;
+}
+.skill-star {
+  color: #e8a020;
+}
+
+/* ===== 打印强制单页 ===== */
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .resume {
+    width: 210mm;
+    height: 297mm;
+    box-shadow: none;
+    border: none;
+  }
+  .sidebar { width: 30%; }
+  .main { width: 70%; }
+}

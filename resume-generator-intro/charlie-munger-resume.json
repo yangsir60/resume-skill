@@ -1,0 +1,79 @@
+{
+  "name": "查理·芒格",
+  "nameEn": "Charles T. Munger",
+  "photo": "",
+  "contact": {
+    "birthday": "1924.01.01",
+    "location": "Los Angeles, CA",
+    "phone": "—",
+    "email": "vice.chairman@berkshire.com"
+  },
+  "hobbies": [
+    "跨学科阅读——穷尽一生构建多元思维模型",
+    "做逆向思考——永远先问'哪里会死，就别去哪'",
+    "撰写并分享人类误判心理学——25 条认知偏误的系统总结"
+  ],
+  "interests": ["阅读", "数学", "投资"],
+  "education": [
+    {
+      "period": "1941 – 1942",
+      "school": "University of Michigan",
+      "schoolEn": "Mathematics (left for WWII)",
+      "major": "数学",
+      "detail": "1941年入学，1942年因二战入伍中断学业。后申请哈佛法学院，1948年以优等成绩毕业（JD）。"
+    },
+    {
+      "period": "1944 – 1948",
+      "school": "Harvard Law School",
+      "schoolEn": "Juris Doctor · Cum Laude",
+      "major": "法学",
+      "detail": "以优等成绩（Cum Laude）获得法学博士学位。在校期间是《哈佛法律评论》成员。"
+    }
+  ],
+  "experience": [
+    {
+      "period": "1962 – 1975",
+      "company": "Munger, Tolles & Olson",
+      "title": "创始合伙人",
+      "titleEn": "Founding Partner",
+      "detail": "创立洛杉矶大型律所。执业期间开始转型投资，逐渐从律师变为全职投资者。"
+    },
+    {
+      "period": "1978 – 2023",
+      "company": "Berkshire Hathaway",
+      "title": "副董事长",
+      "titleEn": "Vice Chairman",
+      "detail": "与 Warren Buffett 搭档 60 余年，将 Berkshire 从一家纺织企业打造为全球最大投资集团之一。"
+    },
+    {
+      "period": "1984 – 2011",
+      "company": "Wesco Financial",
+      "title": "董事长兼 CEO",
+      "titleEn": "Chairman & CEO",
+      "detail": "领导 Wesco Financial（Berkshire 子公司），负责保险与金融业务管理。"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Daily Journal Corporation 董事长",
+      "desc": "担任 Daily Journal 董事长超过 40 年，将其从传统报纸出版转型为法律软件公司。"
+    },
+    {
+      "title": "人类误判心理学",
+      "desc": "总结 25 种人类认知偏误，将心理学原理系统化纳入投资决策框架。收录于《穷查理宝典》。"
+    },
+    {
+      "title": "多元思维模型体系",
+      "desc": "提出跨学科心智模型网格理论——不从单一学科看问题，用历史、数学、生物、心理学多个透镜交叉分析。"
+    }
+  ],
+  "awards": [
+    { "items": ["哈佛法学院优等毕业生 · Cum Laude", "洛杉矶律师协会终身成就奖"] },
+    { "items": ["《穷查理宝典》· 全球畅销书 · 投资经典经典"] }
+  ],
+  "skills": [
+    "跨学科思维：数学、物理、生物学、心理学、历史、法律",
+    "投资与估值：护城河分析、逆向思考、能力圈原则",
+    "管理能力：长期主义、不干预式管理、信任代理人"
+  ]
+}
