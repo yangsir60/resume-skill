@@ -8,6 +8,9 @@
 
 更绝的是看上了别人的排版——截图发给 AI，它照着样子给你配一套新的样式。设计灵感不用从零开始。
 
+<img width="1228" height="1779" alt="简历图片demo" src="https://github.com/user-attachments/assets/cbdcd19f-df35-4432-bd89-7cf6efad268e" />
+
+
 ---
 
 ## 干嘛要有这些约束
